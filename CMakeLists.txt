@@ -16,6 +16,7 @@ set(SOURCES
     src/utils.cpp
     src/vector.cpp
     src/vector_generator.cpp
+    src/wrapper.cpp
 )
 
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
