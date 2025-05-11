@@ -2,7 +2,8 @@
 
 ## Сборка
 ```bash
-cmake -B build && cmake --build build --config Release  
+cmake -B build
+cmake --build build --config Release  
 ```
 
 ## Собранные файлы
