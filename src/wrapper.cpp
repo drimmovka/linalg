@@ -43,7 +43,7 @@ extern "C" {
 
     struct SLE *genRandomSLE(int size, long double inter_left, long double inter_right) {
         linalg::SLEGenerator sleg;
-        auto [A, b] = sleg.random(size, {inter_left, inter_right});
+        auto [A, b] = sleg.random(size, {inter_left, inter_right}, {inter_left, inter_right});
 
         SLE *sle = new SLE();
         sle->raw_A = new long double*[size];
