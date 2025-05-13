@@ -15,7 +15,7 @@ public:
     VectorGenerator();
     ~VectorGenerator();
 
-    Vector random(int size, const Interval& interval={0, 0});
+    Vector random(int size, const Interval& interval);
 
 private:
     std::random_device _rd;

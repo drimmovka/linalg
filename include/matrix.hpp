@@ -13,7 +13,7 @@ namespace linalg
 class Matrix {
 // agreement: guaranteed that initialized matrix is NOT jagged
 public:
-    explicit Matrix(int rows, int cols, Scalar scalar=Scalar());
+    explicit Matrix(int rows=0, int cols=0, Scalar scalar=Scalar());
 
     explicit Matrix(const std::vector<std::vector<Scalar>>& matrix);
 

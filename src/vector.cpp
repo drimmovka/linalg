@@ -20,13 +20,26 @@ int Vector::size() const {
     return _v.size();
 }
 
-// L2 norm
-long double Vector::norm() const {
+long double Vector::normL2() const {
     long double sum = 0;
     for (int i = 0; i < size(); ++i) {
         sum += _v[i];
     }
     return sqrt(sum);
+}
+
+Scalar Vector::normMax() const {
+    if (size() == 0) {
+        throw LinalgError("Vector is empty");
+    }
+    return *std::max_element(_v.begin(), _v.end());
+}
+
+Scalar Vector::normMaxModulo() const {
+    if (size() == 0) {
+        throw LinalgError("Vector is empty");
+    }
+    return *std::max_element(_v.begin(), _v.end(), [](const Scalar& a, const Scalar& b){ return (std::abs(a) < std::abs(b)); });
 }
 
 // accessing an element by index

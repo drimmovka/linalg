@@ -16,9 +16,9 @@ public:
     ~MatrixGenerator();
 
 
-    Matrix random(int rows, int cols, const Interval& interval={0, 0});
+    Matrix random(int rows, int cols, const Interval& interval);
     
-    Matrix randomDiagonallyDominant(int size, const Interval& interval={0, 0});
+    Matrix randomDiagonallyDominant(int size, const Interval& interval);
     
     Matrix hilbert(int size);
 

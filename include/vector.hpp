@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <algorithm>
 #include <cmath>
 
 #include "linalg_types.hpp"
@@ -13,7 +14,7 @@ class Vector {
 
 public:
 
-    explicit Vector(int size, Scalar scalar=Scalar());
+    explicit Vector(int size=0, Scalar scalar=Scalar());
     
     explicit Vector(const std::vector<Scalar>& vector);
 
@@ -21,8 +22,12 @@ public:
 
     int size() const;
 
-    // L2 norm
-    long double norm() const;
+    long double normL2() const;
+
+    Scalar normMax() const;
+
+    Scalar normMaxModulo() const;
+
 
 // accessing an element by index
     Scalar& operator()(int _i);

@@ -15,11 +15,11 @@ public:
     SLEGenerator();
     ~SLEGenerator();
 
-    std::pair<Matrix, Vector> random(int size, const Interval& A_interval={0, 0}, const Interval& b_interval={0, 0});
+    std::pair<Matrix, Vector> random(int size, const Interval& A_interval, const Interval& b_interval);
     
-    std::pair<Matrix, Vector> randomDiagonallyDominant(int size, const Interval& A_interval={0, 0}, const Interval& b_interval={0, 0});
+    std::pair<Matrix, Vector> randomDiagonallyDominant(int size, const Interval& A_interval, const Interval& b_interval);
     
-    std::pair<Matrix, Vector> hilbert(int size, const Interval& b_interval={0, 0});
+    std::pair<Matrix, Vector> hilbert(int size, const Interval& b_interval);
 
 private:
     MatrixGenerator _mg;
