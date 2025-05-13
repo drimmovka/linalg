@@ -9,6 +9,7 @@ add_definitions(-DLINALG_EXPORTS)
 
 set(SOURCES
     src/gauss.cpp
+    src/jacobi.cpp
     src/linalg_error.cpp    
     src/matrix.cpp
     src/matrix_generator.cpp
