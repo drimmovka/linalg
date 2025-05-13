@@ -18,8 +18,11 @@ cmake --build build --config Release
 
 int main() {
     linalg::SLEGenerator sleg;
-    auto [A, b] = sleg.random(5, /* size */ {-100, 100} /* matrix A values distribution */, {-50, 50} /* vector b values distribution */);
-
+    auto [A, b] = sleg.random(
+        5, /* size */
+        {-100, 100}, /* matrix A values distribution */
+        {-50, 50} /* vector b values distribution */
+    );
 
     std::cout << "Matrix A (" << A.rows() << "x" << A.cols() << "):" << std::endl;
     for (int i = 0; i < A.rows(); ++i) {
