@@ -13,6 +13,7 @@ public:
     Jacobi();
     ~Jacobi();
     
+    // use only for diagonally Dominant A
     Vector solve(const Matrix& A, const Vector& b, int max_iter_count=1000, long double eps=1e-6) const;
 
 private:

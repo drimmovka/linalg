@@ -6,6 +6,7 @@ namespace linalg
 Jacobi::Jacobi() = default;
 Jacobi::~Jacobi() = default;
 
+// use only for diagonally Dominant A
 Vector Jacobi::solve(const Matrix& A, const Vector& b, int max_iter_count, long double eps) const {
     if (max_iter_count < 0) {
         throw LinalgError("Max iteration count must be non-negative");
